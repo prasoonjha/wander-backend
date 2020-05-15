@@ -1,7 +1,7 @@
 const axios = require("axios");
 const HttpError = require("../models/http-error");
 
-const API_KEY = "efe3792cac7da7";
+const API_KEY = process.env.LOCATIONIQ_API_KEY;
 
 async function getCoordsForAddress(address) {
   const response = await axios.get(
